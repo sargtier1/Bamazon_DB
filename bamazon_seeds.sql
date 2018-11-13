@@ -7,11 +7,11 @@ use bamazon_db;
 -- creates table
 
 create table product_list(
-    id int not null auto_increment,
+   	id INTEGER NOT NULL AUTO_INCREMENT,
     item_name VARCHAR(25) not null,
     dept_name VARCHAR(25) not null,
     item_price int not null,
-    stock int not null,
+    stock integer not null,
     primary key (id)
 );
 -- puts data in table
@@ -44,8 +44,6 @@ insert into product_list (item_name, dept_name, item_price, stock)
 
 insert into product_list (item_name, dept_name, item_price, stock)
 	values ("Computer", "Electronics", 999.99, 50);
-
-
 
 
 

@@ -52,8 +52,8 @@ function start() {
             var totalPrice = inquireResponse.howMany * res[i].item_price
                 if (inquireResponse.whichProduct === res[i].id && inquireResponse.howMany < res[i].stock) {
                     console.log(inquirerResponse.howMany + "units of " + res[i].item_name + "will be added to the cart for a total price of $ " + totalPrice);
-                    connection.query(
-                    'UPDATE product_list SET ? WHERE ?',
+                    var query = connection.query(
+                        "UPDATE product_list SET ? WHERE ?" 
                         [{
                             stock: res[i].stock - inquireResponse.howMany
                          },
